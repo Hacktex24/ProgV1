@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado C</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .responsive-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px auto;
+        }
+        .result-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .back-button-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado J</h1>
+    <main class="container">
+        <section class="section">
+            <img src="imagen_GSC.jpg" alt="Imagen GS C" class="responsive-image">
+        </section>
+        <section class="result-text">
+            El resultado de C es: <span id="result"></span>
+        </section>
+        <div class="back-button-container">
+            <a href="2.40.1-ajustes-lab-op40.html" class="back-button">Volver a Ajustes de Laboratorio</a>
+        </div>
+        <div class="back-button-container">
+            <a href="index.html" class="back-button">Inicio</a>
+        </div>
+        <div class="back-button-container">
+            <a href="5.40.1-calculo-Altura.html" class="back-button">Cálculo para Altura</a>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const result = urlParams.get('result');
+            document.getElementById('result').innerText = result;
+        });
+    </script>
+</body>
+</html>
